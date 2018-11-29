@@ -1,0 +1,77 @@
+##############################################################################
+# Copyright (c) 1991, 2013 by Oracle Corporation
+##############################################################################
+
+###########################################
+# Cache and I/O
+###########################################
+db_block_size=8192
+
+###########################################
+# Cursors and Library Cache
+###########################################
+open_cursors=300
+
+###########################################
+# Database Identification
+###########################################
+db_name="SALCUS"
+
+###########################################
+# File Configuration
+###########################################
+control_files=("/opt/oracle/oradata/SALCUS/control01.ctl", "/opt/oracle/oradata/SALCUS/control02.ctl")
+
+###########################################
+# Miscellaneous
+###########################################
+audit_sys_operations=false
+compatible=12.2.0
+diagnostic_dest=/opt/oracle
+enable_pluggable_database=true
+
+###########################################
+# NLS added NLS parameter for SALCUS
+###########################################
+
+nls_language                     = GERMAN
+nls_territory                    = GERMANY
+nls_currency                     = DM
+nls_iso_currency                 = GERMANY
+nls_numeric_characters           = ",."
+nls_date_format                  = DD.MM.YY
+nls_date_language                = GERMAN
+nls_sort                         = GERMAN
+
+
+###########################################
+# Processes and Sessions
+###########################################
+processes=640
+
+###########################################
+# SGA Memory
+###########################################
+sga_target=1536m
+
+###########################################
+# Security and Auditing
+###########################################
+audit_file_dest="/opt/oracle/admin/SALCUS/adump"
+audit_trail=none
+remote_login_passwordfile=EXCLUSIVE
+
+###########################################
+# Shared Server
+###########################################
+dispatchers="(PROTOCOL=TCP) (SERVICE=SALCUSXDB)"
+
+###########################################
+# Sort, Hash Joins, Bitmap Indexes
+###########################################
+pga_aggregate_target=512m
+
+###########################################
+# System Managed Undo and Rollback Segments
+###########################################
+undo_tablespace=UNDOTBS1
